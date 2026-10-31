@@ -1,0 +1,95 @@
+import type { CattleListing } from "@/types/database";
+
+/**
+ * Fallback high-quality demonstration livestock when the remote database is empty or unseeded.
+ * Uses fixed, deterministic ISO timestamp strings to prevent dynamic timestamp prerendering issues.
+ */
+export const DEMO_LISTINGS: CattleListing[] = [
+  {
+    id: "demo-listing-1",
+    seller_id: "demo-seller-1",
+    title: "Pure Sahiwal Cow — 2nd Lactation with Female Calf",
+    animal_type: "cow",
+    breed: "Sahiwal",
+    gender: "female",
+    age_months: 48,
+    milk_yield_liters_per_day: 16.5,
+    price_inr: 85000,
+    description:
+      "Original Sahiwal cow from Karnal district. 2nd lactation, highly docile temperament, yielding 16-17 liters daily. Vaccinated against FMD.",
+    district: "Karnal",
+    state: "Haryana",
+    status: "published",
+    created_at: "2026-10-24T12:00:00.000Z",
+    updated_at: "2026-10-24T12:00:00.000Z",
+    images: [],
+    seller: {
+      id: "demo-seller-1",
+      full_name: "Gurpreet Singh",
+      district: "Karnal",
+      state: "Haryana",
+      avatar_path: null,
+      created_at: "2026-10-24T12:00:00.000Z",
+      phone_public: true,
+      phone: "+919876543210",
+    },
+  },
+  {
+    id: "demo-listing-2",
+    seller_id: "demo-seller-2",
+    title: "Elite Murrah Buffalo — High Milk Yield Champion",
+    animal_type: "buffalo",
+    breed: "Murrah",
+    gender: "female",
+    age_months: 54,
+    milk_yield_liters_per_day: 19.0,
+    price_inr: 125000,
+    description:
+      "Heavy Murrah buffalo, jet black coat, tightly curled horns. Peak yield 19 liters/day with high fat content (7.2%). Perfect dairy asset.",
+    district: "Rohtak",
+    state: "Haryana",
+    status: "published",
+    created_at: "2026-10-24T12:00:00.000Z",
+    updated_at: "2026-10-24T12:00:00.000Z",
+    images: [],
+    seller: {
+      id: "demo-seller-2",
+      full_name: "Satish Yadav",
+      district: "Rohtak",
+      state: "Haryana",
+      avatar_path: null,
+      created_at: "2026-10-24T12:00:00.000Z",
+      phone_public: false,
+      phone: null, // Protected phone number demonstration
+    },
+  },
+  {
+    id: "demo-listing-3",
+    seller_id: "demo-seller-3",
+    title: "Gir Heifer — Indigenous Vedic Lineage",
+    animal_type: "cow",
+    breed: "Gir",
+    gender: "female",
+    age_months: 28,
+    milk_yield_liters_per_day: 12.0,
+    price_inr: 65000,
+    description:
+      "Healthy Gir cow ready for 1st lactation. Characteristic convex forehead and pendulous ears. Organic grass-fed lineage.",
+    district: "Junagadh",
+    state: "Gujarat",
+    status: "published",
+    created_at: "2026-10-24T12:00:00.000Z",
+    updated_at: "2026-10-24T12:00:00.000Z",
+    images: [],
+    seller: {
+      id: "demo-seller-3",
+      full_name: "Mansukhbhai Patel",
+      district: "Junagadh",
+      state: "Gujarat",
+      avatar_path: null,
+      created_at: "2026-10-24T12:00:00.000Z",
+      phone_public: true,
+      phone: "+919898989898",
+    },
+  },
+];

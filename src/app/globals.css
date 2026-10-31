@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #1B4332;
+  --color-forest-hover: #2D6A4F;
+  --color-forest-dark: #081C15;
+  --color-olive: #606C38;
+  --color-terracotta: #BC6C25;
+  --color-sand: #DDA15E;
+  --color-cream: #FDFBF7;
+  --color-surface: #F8F5EE;
+  --color-charcoal: #1F2421;
+  --color-slate-muted: #495057;
+  --color-border-muted: #E6E2D8;
+  --color-destructive-red: #9B2226;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: #FDFBF7;
+  --foreground: #1F2421;
+  --card: #F8F5EE;
+  --card-foreground: #1F2421;
+  --primary: #1B4332;
+  --primary-foreground: #FDFBF7;
+  --secondary: #606C38;
+  --secondary-foreground: #FDFBF7;
+  --muted: #E6E2D8;
+  --muted-foreground: #495057;
+  --accent: #BC6C25;
+  --accent-foreground: #FFFFFF;
+  --destructive: #9B2226;
+  --destructive-foreground: #FFFFFF;
+  --border: #E6E2D8;
+  --input: #E6E2D8;
+  --ring: #1B4332;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Ensure accessible focus styles across interactive elements */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
